@@ -1,0 +1,94 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: #fff;
+}
+
+div img {
+	width: 100%;
+	max-width: 250px; /*updated to match instructor img size*/
+}
+
+/* grid system -- mobile first! */
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*All colums are the same width on mobile. and stacked*/
+
+[class*="col-"] {
+	margin-left: 4%;
+	margin-right: 4%;
+	width: 92%;
+}
+
+/*Color these background to keep track of which col is being manipulated*/
+
+.col-1-4 {
+	background-color: salmon;
+}
+
+.col-2 {
+	background-color: lemonchiffon;	
+}
+
+.col-3 {
+	background-color: lightcyan;
+}
+
+.col-4 {
+	background-color: lavender;
+}
+
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+
+	[class*='col-'] {
+		margin-right: 0;
+		float: left;
+	}
+	/*row 1 and row to can be stacked 2 wide in ladscape*/
+	.col-2, .col-1-2 {
+		float: left;
+		width: 44%;
+	}
+
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+
+	.col-1-4 {
+		width: 20%;
+	}
+/*	This width could have taken the full 72% but
+	the article it went too far right and the rest 
+	of the items had about 4% on their right.*/
+	.col-3 {
+		width: 68%
+	}
+
+}

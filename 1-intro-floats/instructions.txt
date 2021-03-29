@@ -11,3 +11,10 @@ Write the grid in mobile-first fashion.
 * Styles outside the media queries are universal and work to display the site in mobile format.
 
 * Two media queries are provided for "tablet" and "desktop" dimensions. Write styles that override the mobile layouts here. 
+
+Additional directions from deck:
+•  Create a 4-column floated grid with given starting files 
+•  Include 2 breakpoints (your choice for where) and 3layouts ("desktop", "tablet", "phone") 
+•  IF YOU HAVE EXTRA TIME:
+•  Consider how to equalize the columns so they wrap without breaking
+•  Consider reordering of Row 3 at tablet and phone sizes
