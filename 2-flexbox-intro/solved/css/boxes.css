@@ -6,6 +6,11 @@ ul {
 	padding: 0;
 	margin: 0;
 	border: 1px dotted red;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	height: 400px;
+	align-items: center;
 }
 li {
 	border: 1px solid #999;
@@ -13,7 +18,15 @@ li {
 	padding: 0.5em;
 }
 
-
+.flex2 {
+	border:  2px dotted blue;
+	/*Gotta be honest flex-grow/shrink and basis is some blackbox magic. 
+	I "get" it but I do not really understand it. It makes items 
+	grow/shrink more than neighbors, and basis really is just trying 
+	to achieve the value but can fudge the numbers to better fit the 
+	flow and justifications*/
+	flex: 1 3 300px;
+}
 
 
 
