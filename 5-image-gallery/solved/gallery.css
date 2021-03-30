@@ -13,8 +13,33 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
 }
+
+ul li {
+	flex: auto;
+}
+
+img {
+	width: 100%;
+}
+
 @media (min-width: 550px) {
+
+/*uncomment to introduce structure of max 2 columns at this screensize*/
+
+	ul li {
+		flex-basis: 50%;
+	}
+
 }
 @media (min-width: 850px) { 
+/*uncomment to introduce structure of max 3 columns at this screensize*/
+
+	ul li {
+		flex-basis: 33%;
+	}
+
 }
+
