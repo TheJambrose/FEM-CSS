@@ -127,12 +127,12 @@ footer a {
   text-decoration: none;
 }
 /* grid system */
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  flex: 0 1 auto;
-}
-[class*="col-"] {
+.row, nav{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  }
+/*[class*="col-"] {
   flex: 0 0 92%;
   margin: 0 4%;
 }
@@ -147,11 +147,11 @@ footer a {
 }
 .row.col-1-4 {
   margin-top: 3em;
-}
+}*/
 /* global alignment options */
-.reverse {
+/*.reverse {
   flex-direction: row-reverse;
-}
+}*/
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
@@ -177,19 +177,13 @@ div.row {
     margin-left: 4%;
     margin-right: 0%;
   }
-  .col-1-2,
-  .col-2,
-  [class*="sidebar"] {
-    flex: 0 0 44%; 
-  }
-  .col-1-4,
-  .col-3,
-  .col-4 {
-    flex: 0 0 92%;
-  }
-  .reverse [class*='col-'] {
-    margin-left: 0%;
-    margin-right: 4%;
+
+  .sidecontent {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    width: 95%;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -220,7 +214,34 @@ div.row {
   nav a {
       padding: 0em 1em;
   }
-  .col-1-2,
+
+  .row {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  .sidecontent{
+    grid-template-columns: 1fr;
+    grid-template-rows: .15fr 1fr .1fr .69fr .1fr;
+    grid-template-areas: 
+    "..."
+    "testimonials"
+    "..."
+    "pie-month"
+    "...";
+    margin-bottom: auto%;
+    width: 92%;
+  }
+  .sidebar-primary{
+    grid-area: testimonials;
+  }
+
+  .sidebar-secondary{
+    grid-area: pie-month;
+  }
+
+/*  .col-1-2,
   .col-1-4 {
     flex: 0 0 20%;
   }
@@ -248,5 +269,5 @@ div.row {
   }
   .order-fourth {
     order: 4;
-  }
+  }*/
 }
