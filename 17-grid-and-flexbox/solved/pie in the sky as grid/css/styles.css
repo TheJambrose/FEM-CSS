@@ -59,7 +59,7 @@ nav a:hover {
   color:#00c4c7;
 }
 
-.content {
+.content, .gallery-wrapper {
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -128,6 +128,19 @@ footer a {
   color: white;
   text-decoration: none;
 }
+
+.gallery-wrapper ul {
+  /*margin: 0 auto;*/
+  /*padding: 0;*/
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.gallery-wrapper ul li img {
+  width: 100%
+}
+
 /* grid system */
 
 
@@ -138,13 +151,18 @@ footer a {
       max-width: 767px;
   }
 
+nav ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
  nav li,
   nav li:nth-child(even),
   nav li:nth-child(odd) {
-    display: inline-block;
-    width: auto;
-    float: none;
-    padding: 0;
+    /*display: inline-block;*/
+    /*width: auto;*/
+    /*float: none;*/
+    /*padding: 0;*/
   }
   nav a {
     padding: 0em 1em;
@@ -159,6 +177,14 @@ footer a {
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr;
   }
+  .gallery-wrapper ul{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .gallery-wrapper ul li{
+    flex: 0 0 48%;
+}
+
 
 }
 /* Large devices (large desktops, 1200px and up) */
